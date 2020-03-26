@@ -1,0 +1,63 @@
+# [Created by task 2.5.1 5/9/2019 19:38:12]
+# Taskwarrior program configuration file.
+# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-color',
+# 'man task-sync' or 'man taskrc'
+
+# Here is an example of entries that use the default, override and blank values
+#   variable=foo   -- By specifying a value, this overrides the default
+#   variable=      -- By specifying no value, this means no default
+#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
+
+# Use the command 'task show' to see all defaults and overrides
+
+search.case.sensitive=no
+workweek=1,2,3,4,5
+
+# inthe.am api settings
+taskd.certificate=/home/chris/Seafile/library/personal/backups/passkeys/inthe.am/private.certificate.pem
+taskd.key=/home/chris/Seafile/library/personal/backups/passkeys/inthe.am/private.key.pem
+taskd.ca=/home/chris/Seafile/library/personal/backups/passkeys/inthe.am/ca.cert.pem
+taskd.server=taskwarrior.inthe.am:53589
+taskd.credentials=inthe_am/ctastad/4ab2c421-49d7-4605-a49e-3c6ee27adf78
+taskd.trust=ignore hostname
+
+
+# Files
+data.location=~/.task
+
+# Color theme (uncomment one to use)
+#include /usr/share/taskwarrior/light-16.theme
+#include /usr/share/taskwarrior/light-256.theme
+include /usr/share/taskwarrior/dark-16.theme
+#include /usr/share/taskwarrior/dark-256.theme
+#include /usr/share/taskwarrior/dark-red-256.theme
+#include /usr/share/taskwarrior/dark-green-256.theme
+#include /usr/share/taskwarrior/dark-blue-256.theme
+#include /usr/share/taskwarrior/dark-violets-256.theme
+#include /usr/share/taskwarrior/dark-yellow-green.theme
+#include /usr/share/taskwarrior/dark-gray-256.theme
+#include /usr/share/taskwarrior/dark-gray-blue-256.theme
+#include /usr/share/taskwarrior/solarized-dark-256.theme
+#include /usr/share/taskwarrior/solarized-light-256.theme
+#include /usr/share/taskwarrior/no-color.theme
+
+context.phone=+phone
+context.work=+work or +lit
+context.errand=+errand or +target or +sams or +tjs or +microcenter
+context.home=+home or +phone or +comp
+context.comp=+comp
+
+report.daily_summary.description=Attenuated completed tasks list
+report.daily_summary.columns=entry,end,entry.age,depends,priority,project,recur.indicator,due,description
+report.daily_summary.labels=Created,Completed,Age,Deps,P,Project,R,Due,Description
+report.daily_summary.sort=end+
+report.daily_summary.filter=status:completed
+
+report.agenda.description=List of annotations for agenda
+report.agenda.columns=description
+report.agenda.labels=Description
+report.agenda.sort=end+
+report.agenda.filter=
+
+urgency.uda.priority.L.coefficient=-2
+urgency.user.tag.s.coefficient=-2
