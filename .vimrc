@@ -13,7 +13,7 @@ set wildmenu
 " ----------
 set hlsearch
 set number
-set cursorline
+" set cursorline
 set ignorecase
 set smartcase
 set tabstop=4
@@ -74,7 +74,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'arcticicestudio/nord-vim'
-Plugin 'chriskempson/base16-vim'
 " language specific
 Plugin 'lervag/vimtex'
 Plugin 'jalvesaq/Nvim-R'
@@ -85,18 +84,19 @@ call vundle#end()            " required
 
 " Appearance
 " ----------
-let base16colorspace=256  " Access colors present in 256 colorspace
+" let base16colorspace=256  " Access colors present in 256 colorspace
 " set termguicolors
 " set t_Co=256
 " set background=dark
-colorscheme base16-nord
+" colorscheme base16-nord
+colorscheme nord
 highlight LineNr ctermfg=grey
-highlight CursorLineNr ctermfg=blue
+" highlight CursorLineNr ctermfg=blue
 " ----------
 
 " Airline
 " ----------
-let g:airline_theme='zenburn'
+let g:airline_theme='bubblegum'
 let g:airline_mode_map = {
             \ '__' : '-',
             \ 'c'  : 'C',

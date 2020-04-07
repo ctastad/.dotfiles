@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand\textbullet{\ensuremath{\bullet}}
+
+\usepackage{lmodern}
+\usepackage{float}
+\usepackage{titling}
+\usepackage{lineno}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\setlength{\droptitle}{-5em}
+
+\title{}
+\author{Christopher Tastad}
+
+\begin{document}
+
+\maketitle
+
+\end{document}
