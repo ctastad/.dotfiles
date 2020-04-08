@@ -70,9 +70,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline-themes'
 Plugin 'arcticicestudio/nord-vim'
 " language specific
 Plugin 'lervag/vimtex'
@@ -97,7 +98,7 @@ highlight LineNr ctermfg=grey cterm=bold
 
 " Airline
 " ----------
-let g:airline_theme='bubblegum'
+" let g:airline_theme='minimalist'
 let g:airline_mode_map = {
             \ '__' : '-',
             \ 'c'  : 'C',
