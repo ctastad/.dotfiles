@@ -2,8 +2,8 @@ set nocompatible              " be iMproved, required
 filetype plugin indent on    " required
 syntax on
 set spelllang=en_us
-set spellfile=~/Seafile/library/personal/backups/vim/spell/en.utf-8.add
-set thesaurus+=~/Seafile/library/personal/backups/vim/spell/thesaurus.txt
+set spellfile=~/.vim/spell/en.utf-8.add
+set thesaurus+=~/.vim/spell/thesaurus.txt
 set backupdir=/tmp
 set showcmd
 " set path+=**
@@ -90,8 +90,9 @@ call vundle#end()            " required
 " set background=dark
 " colorscheme base16-nord
 colorscheme nord
-highlight LineNr ctermfg=grey
-" highlight CursorLineNr ctermfg=blue
+set cursorline
+highlight CursorLineNR ctermfg=blue cterm=bold
+highlight LineNr ctermfg=grey cterm=bold
 " ----------
 
 " Airline
