@@ -61,3 +61,4 @@ report.agenda.filter=
 
 urgency.uda.priority.L.coefficient=-2
 urgency.user.tag.s.coefficient=-2
+urgency.user.tag.mit.coefficient=5
