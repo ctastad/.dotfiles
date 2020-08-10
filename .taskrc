@@ -14,9 +14,9 @@ search.case.sensitive=no
 workweek=1,2,3,4,5
 
 # inthe.am api settings
-taskd.certificate=/home/chris/Seafile/library/personal/backups/passkeys/inthe.am/private.certificate.pem
-taskd.key=/home/chris/Seafile/library/personal/backups/passkeys/inthe.am/private.key.pem
-taskd.ca=/home/chris/Seafile/library/personal/backups/passkeys/inthe.am/ca.cert.pem
+taskd.certificate=/home/chris/Seafile/library/personal/tech/passkeys/inthe.am/private.certificate.pem
+taskd.key=/home/chris/Seafile/library/personal/tech/passkeys/inthe.am/private.key.pem
+taskd.ca=/home/chris/Seafile/library/personal/tech/passkeys/inthe.am/ca.cert.pem
 taskd.server=taskwarrior.inthe.am:53589
 taskd.credentials=inthe_am/ctastad/4ab2c421-49d7-4605-a49e-3c6ee27adf78
 taskd.trust=ignore hostname

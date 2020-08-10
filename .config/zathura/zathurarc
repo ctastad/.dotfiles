@@ -1,4 +1,3 @@
-set recolor
 set recolor-lightcolor "#313338"
 set default-bg "#36393e"
 set statusbar-bg "#36393e"

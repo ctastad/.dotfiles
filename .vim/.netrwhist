@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/chris/Seafile/library/work/research/starr_lab/ocpmi'
-let g:netrw_dirhist_2='/home/chris/Seafile/library/work/research/starr_lab/ocpmi/methods'
-let g:netrw_dirhist_3='/home/chris/Seafile/library/work/research/starr_lab/ocpmi/methods/XCAVATOR'
-let g:netrw_dirhist_4='/home/chris/Seafile/library/work/research/starr_lab/ocpmi/methods'
-let g:netrw_dirhist_5='/home/chris/Seafile/library/work/research/starr_lab/ocpmi/methods/seurat_tutorial'
-let g:netrw_dirhist_6='/home/chris/.config/ranger'
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/chris/Seafile/library/personal/tech/server/man/_site'
+let g:netrw_dirhist_6='/home/chris/Seafile/library/finance'
+let g:netrw_dirhist_5='/home/chris/Seafile/library/finance/banking/amex/Payments'
+let g:netrw_dirhist_4='/home/chris/Seafile/library/finance/banking/amex'
+let g:netrw_dirhist_3='/home/chris/Seafile/library/finance/banking'
+let g:netrw_dirhist_2='/home/chris/Seafile/library/finance'
+let g:netrw_dirhist_1='/home/chris/.config/ranger'
