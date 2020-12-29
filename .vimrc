@@ -60,6 +60,7 @@ let g:syntastic_check_on_wq = 0
 " Vimtex Settings
 " ----------
 let g:vimtex_view_method = 'zathura'
+let g:tex_flavor = 'latex'
 " ----------
 
 " Vundle

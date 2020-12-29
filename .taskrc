@@ -14,11 +14,11 @@ search.case.sensitive=no
 workweek=1,2,3,4,5
 
 # inthe.am api settings
-taskd.certificate=/home/chris/Seafile/library/personal/tech/passkeys/inthe.am/private.certificate.pem
-taskd.key=/home/chris/Seafile/library/personal/tech/passkeys/inthe.am/private.key.pem
-taskd.ca=/home/chris/Seafile/library/personal/tech/passkeys/inthe.am/ca.cert.pem
-taskd.server=taskwarrior.inthe.am:53589
+taskd.certificate=/home/chris/Seafile/library/personal/tech/keys/inthe.am/private.certificate.pem
+taskd.key=/home/chris/Seafile/library/personal/tech/keys/inthe.am/private.key.pem
+taskd.ca=/home/chris/Seafile/library/personal/tech/keys/inthe.am/ca.cert.pem
 taskd.credentials=inthe_am/ctastad/4ab2c421-49d7-4605-a49e-3c6ee27adf78
+#taskd.credentials=inthe_am/tasta005/8cf84653-78e1-4eb1-bd95-805dd27d838d
 taskd.trust=ignore hostname
 
 
@@ -62,3 +62,5 @@ report.agenda.filter=
 urgency.uda.priority.L.coefficient=-2
 urgency.user.tag.s.coefficient=-2
 urgency.user.tag.mit.coefficient=5
+taskd.server=inthe.am:53589
+report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description.count,urgency
