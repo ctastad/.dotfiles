@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/chris'
+let g:netrw_dirhist_8='/home/chris/Seafile/library/personal/cont_ed/freecodecamp/python'
 let g:netrw_dirhist_7='/home/chris/Seafile/library/personal/tech/server/man/_site'
 let g:netrw_dirhist_6='/home/chris/Seafile/library/finance'
 let g:netrw_dirhist_5='/home/chris/Seafile/library/finance/banking/amex/Payments'

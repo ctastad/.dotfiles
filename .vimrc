@@ -21,6 +21,10 @@ set shiftwidth=4
 set expandtab
 " ----------
 
+" tagbar
+" ----------
+nmap <F8> :TagbarToggle<CR>
+
 " Nvim-R
 " ----------
 "  Knit Output
@@ -79,6 +83,7 @@ Plugin 'arcticicestudio/nord-vim'
 " language specific
 Plugin 'lervag/vimtex'
 Plugin 'jalvesaq/Nvim-R'
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

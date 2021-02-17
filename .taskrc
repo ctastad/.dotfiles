@@ -44,7 +44,7 @@ include /usr/share/taskwarrior/dark-16.theme
 context.phone=+phone
 context.work=+work or +lit
 context.errand=+errand or +target or +sams or +tjs or +microcenter
-context.home=+home or +phone or +comp
+context.home=+home or +phone or +comp or -work
 context.comp=+comp
 
 report.daily_summary.description=Attenuated completed tasks list
@@ -60,7 +60,9 @@ report.agenda.sort=end+
 report.agenda.filter=
 
 urgency.uda.priority.L.coefficient=-2
-urgency.user.tag.s.coefficient=-2
+urgency.user.tag.sdm.coefficient=-2
+urgency.user.tag.agenda.coefficient=-10
 urgency.user.tag.mit.coefficient=5
+urgency.user.project.dnd.coefficient=-2
 taskd.server=inthe.am:53589
 report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description.count,urgency
