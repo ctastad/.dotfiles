@@ -38,6 +38,7 @@ nmap <LocalLeader>11 <Plug>RSendFile
 " Omnicomplete
 " ----------
 set omnifunc=syntaxcomplete#Complete
+autocmd FileType python3 set omnifunc=pythoncomplete#Complete
 " ----------
 
 " KEYBINDINGS
