@@ -47,11 +47,11 @@ context.errand=+errand or +target or +sams or +tjs or +microcenter
 context.home=+home or +phone or +comp or -work
 context.comp=+comp
 
-report.daily_summary.description=Attenuated completed tasks list
-report.daily_summary.columns=entry,end,entry.age,depends,priority,project,recur.indicator,due,description
-report.daily_summary.labels=Created,Completed,Age,Deps,P,Project,R,Due,Description
-report.daily_summary.sort=end+
-report.daily_summary.filter=status:completed
+report.dsum.description=Attenuated completed tasks list
+report.dsum.columns=entry,end,entry.age,depends,priority,project,recur.indicator,due,description
+report.dsum.labels=Created,Completed,Age,Deps,P,Project,R,Due,Description
+report.dsum.sort=end+
+report.dsum.filter=status:completed
 
 report.agenda.description=List of annotations for agenda
 report.agenda.columns=description

@@ -144,3 +144,25 @@ let g:netrw_winsize = 25
 "   autocmd VimEnter * :Vexplore
 " augroup END
 " ----------
+"
+" spell highlight fix
+let java_ignore_javadoc=1
+let g:markdown_fenced_languages = [
+        \ 'vim',
+        \  'css',
+        \  'erb=eruby',
+        \  'go',
+        \  'java',
+        \  'html',
+        \  'javascript',
+        \  'js=javascript',
+        \  'json=javascript',
+        \  'ruby',
+        \  'sass',
+        \  'sql',
+        \  'xml',
+        \  'cpp',
+        \  'python',
+        \  'bash=sh',
+        \  'cmake'
+        \]
