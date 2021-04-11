@@ -63,12 +63,8 @@ urgency.uda.priority.L.coefficient=-2
 urgency.user.tag.sdm.coefficient=-2
 urgency.user.tag.agenda.coefficient=-10
 urgency.user.tag.mit.coefficient=5
-<<<<<<< HEAD
 taskd.server=freecinc.com:53589
-=======
 urgency.user.project.dnd.coefficient=-2
-taskd.server=inthe.am:53589
->>>>>>> 2377c2bf7976a4f62567a4b67464316efc3e6d8f
 report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description.count,urgency
 taskd.key=\/home\/chris\/.task\/freecinc_f42e72de.key.pem
 taskd.certificate=\/home\/chris\/.task\/freecinc_f42e72de.cert.pem
