@@ -21,6 +21,10 @@ set shiftwidth=4
 set expandtab
 " ----------
 
+" tagbar
+" ----------
+nmap <F8> :TagbarToggle<CR>
+
 " Nvim-R
 " ----------
 "  Knit Output
@@ -34,6 +38,7 @@ nmap <LocalLeader>11 <Plug>RSendFile
 " Omnicomplete
 " ----------
 set omnifunc=syntaxcomplete#Complete
+autocmd FileType python3 set omnifunc=pythoncomplete#Complete
 " ----------
 
 " KEYBINDINGS
@@ -79,6 +84,7 @@ Plugin 'arcticicestudio/nord-vim'
 " language specific
 Plugin 'lervag/vimtex'
 Plugin 'jalvesaq/Nvim-R'
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -138,3 +144,25 @@ let g:netrw_winsize = 25
 "   autocmd VimEnter * :Vexplore
 " augroup END
 " ----------
+"
+" spell highlight fix
+let java_ignore_javadoc=1
+let g:markdown_fenced_languages = [
+        \ 'vim',
+        \  'css',
+        \  'erb=eruby',
+        \  'go',
+        \  'java',
+        \  'html',
+        \  'javascript',
+        \  'js=javascript',
+        \  'json=javascript',
+        \  'ruby',
+        \  'sass',
+        \  'sql',
+        \  'xml',
+        \  'cpp',
+        \  'python',
+        \  'bash=sh',
+        \  'cmake'
+        \]

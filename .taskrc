@@ -44,14 +44,14 @@ include /usr/share/taskwarrior/dark-16.theme
 context.phone=+phone
 context.work=+work or +lit
 context.errand=+errand or +target or +sams or +tjs or +microcenter
-context.home=+home or +phone or +comp
+context.home=+home or +phone or +comp or -work
 context.comp=+comp
 
-report.daily_summary.description=Attenuated completed tasks list
-report.daily_summary.columns=entry,end,entry.age,depends,priority,project,recur.indicator,due,description
-report.daily_summary.labels=Created,Completed,Age,Deps,P,Project,R,Due,Description
-report.daily_summary.sort=end+
-report.daily_summary.filter=status:completed
+report.dsum.description=Attenuated completed tasks list
+report.dsum.columns=entry,end,entry.age,depends,priority,project,recur.indicator,due,description
+report.dsum.labels=Created,Completed,Age,Deps,P,Project,R,Due,Description
+report.dsum.sort=end+
+report.dsum.filter=status:completed
 
 report.agenda.description=List of annotations for agenda
 report.agenda.columns=description
@@ -60,9 +60,15 @@ report.agenda.sort=end+
 report.agenda.filter=
 
 urgency.uda.priority.L.coefficient=-2
-urgency.user.tag.s.coefficient=-2
+urgency.user.tag.sdm.coefficient=-2
+urgency.user.tag.agenda.coefficient=-10
 urgency.user.tag.mit.coefficient=5
+<<<<<<< HEAD
 taskd.server=freecinc.com:53589
+=======
+urgency.user.project.dnd.coefficient=-2
+taskd.server=inthe.am:53589
+>>>>>>> 2377c2bf7976a4f62567a4b67464316efc3e6d8f
 report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description.count,urgency
 taskd.key=\/home\/chris\/.task\/freecinc_f42e72de.key.pem
 taskd.certificate=\/home\/chris\/.task\/freecinc_f42e72de.cert.pem
