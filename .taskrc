@@ -69,3 +69,4 @@ report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,s
 taskd.key=\/home\/chris\/.task\/freecinc_f42e72de.key.pem
 taskd.certificate=\/home\/chris\/.task\/freecinc_f42e72de.cert.pem
 taskd.credentials=FreeCinc\/freecinc_f42e72de\/104558ac-4d29-43d9-8e98-77b08f8d466d
+taskd.ca=\/home\/chris\/.task\/freecinc_f42e72de.ca.pem
