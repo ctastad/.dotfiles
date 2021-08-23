@@ -12,3 +12,4 @@ push @generated_exts, "nls";
 push @generated_exts, "synctex.gz";
 push @generated_exts, "run.xml";
 $bibtex_use = 2;
+$pdflatex="xelatex %O %S";

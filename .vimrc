@@ -65,7 +65,16 @@ let g:syntastic_check_on_wq = 0
 " Vimtex Settings
 " ----------
 let g:vimtex_view_method = 'zathura'
-let g:tex_flavor = 'latex'
+"let g:tex_flavor = 'latex'
+let g:vimtex_compiler_latexmk = {
+        \ 'executable' : 'latexmk',
+        \ 'options' : [
+        \   '-xelatex',
+        \   '-file-line-error',
+        \   '-synctex=1',
+        \   '-interaction=nonstopmode',
+        \ ],
+        \}
 " ----------
 
 " Vundle
