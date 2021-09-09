@@ -30,4 +30,5 @@ export PATH=$PATH:~/.gen3
 
 export GOPATH=${HOME}/go
 export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
+export PATH=${PATH}:$HOME/bin
 
