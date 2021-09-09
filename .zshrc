@@ -19,9 +19,6 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
     exec tmux
 fi
 
-# Dotfile repo alias
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Add to PATH
@@ -32,3 +29,6 @@ export GOPATH=${HOME}/go
 export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
 export PATH=${PATH}:$HOME/bin
 
+# aliases
+alias ll='ls -la'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
