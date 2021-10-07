@@ -94,6 +94,7 @@ Plugin 'arcticicestudio/nord-vim'
 Plugin 'lervag/vimtex'
 Plugin 'jalvesaq/Nvim-R'
 Plugin 'majutsushi/tagbar'
+Plugin 'broadinstitute/vim-wdl'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
