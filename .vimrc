@@ -33,6 +33,7 @@ if $DISPLAY != ""
 endif
 
 nmap <LocalLeader>11 <Plug>RSendFile
+let R_assign = 0
 " ----------
 
 " Omnicomplete
