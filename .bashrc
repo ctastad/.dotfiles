@@ -153,3 +153,6 @@ unset __conda_setup
 
 export GOPATH=${HOME}/go
 export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
+
+# ranger settings
+export RANGER_LOAD_DEFAULT_RC=false
