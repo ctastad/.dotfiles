@@ -156,3 +156,7 @@ export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
 
 # ranger settings
 export RANGER_LOAD_DEFAULT_RC=false
+
+# default editor
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
