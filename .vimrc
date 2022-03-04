@@ -6,6 +6,7 @@ set spellfile=~/.vim/spell/en.utf-8.add
 set thesaurus+=~/.vim/spell/thesaurus.txt
 set backupdir=/tmp
 set showcmd
+set clipboard=unnamed
 " set path+=**
 set wildmenu
 
