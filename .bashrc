@@ -135,17 +135,18 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # Add to PATH
 export PATH=/home/chris/.local/bin:$PATH
 export PATH=$PATH:~/.gen3
+export SINGULARITY_CACHEDIR=/mnt/data1_ssd/.singularity
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/chris/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/chris/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/chris/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/chris/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/chris/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/chris/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/chris/anaconda3/bin:$PATH"
+        export PATH="/home/chris/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -160,3 +161,5 @@ export RANGER_LOAD_DEFAULT_RC=false
 # default editor
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
+export GOPATH=${HOME}/go
+export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
