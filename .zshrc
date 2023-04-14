@@ -9,8 +9,10 @@
 #------------------------------------------------------------------------------
 # 2. Exports
 #------------------------------------------------------------------------------
-#export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-#export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/share:$PATH"
 export EDITOR="emacsclient -c -n"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
