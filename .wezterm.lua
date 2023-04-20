@@ -15,7 +15,7 @@ end
 -- For example, changing the color scheme:
 config.color_scheme = 'nord'
 config.enable_tab_bar = false
-config.window_decorations = "NONE"
+-- config.window_decorations = "NONE"
 
 -- and finally, return the configuration to wezterm
 return config
