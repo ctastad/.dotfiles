@@ -135,7 +135,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # Add to PATH
 export PATH=/home/chris/.local/bin:$PATH
 export PATH=$PATH:~/.gen3
-export SINGULARITY_CACHEDIR=/mnt/data1_ssd/.singularity
+export SINGULARITY_CACHEDIR=/mnt/data0/singularity
 export PATH="$HOME/.local/bin:$PATH"
 
 # >>> conda initialize >>>
