@@ -15,7 +15,19 @@ end
 -- For example, changing the color scheme:
 config.color_scheme = 'nord'
 config.enable_tab_bar = false
--- config.window_decorations = "NONE"
+config.window_decorations = "RESIZE"
+config.window_close_confirmation = 'AlwaysPrompt'
+
+config.keys = {
+  -- Turn off the default CMD-m Hide action, allowing CMD-m to
+  -- be potentially recognized and handled by the tab
+  {
+    key = 'w',
+    mods = 'CMD',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
+}
+
 
 -- and finally, return the configuration to wezterm
 return config
