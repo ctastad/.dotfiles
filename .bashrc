@@ -140,17 +140,21 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/c/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/cw/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/c/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/c/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/cw/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/cw/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/c/miniconda3/bin:$PATH"
+        export PATH="/home/cw/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
+
+if [ -f "/home/cw/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/home/cw/miniforge3/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
 
 export GOPATH=${HOME}/go
@@ -164,3 +168,5 @@ export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export GOPATH=${HOME}/go
 export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
+export PATH=$PATH:/var/lib/flatpak/exports/bin
+export PATH=$PATH:/usr/local/go/bin
