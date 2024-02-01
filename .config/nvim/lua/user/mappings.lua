@@ -20,6 +20,13 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    --
+    -- shortcuts for sniprun
+    ["<leader>s"] = { name = "SnipRun" },
+    vim.api.nvim_set_keymap('n', '<leader>sr', '<Plug>SnipRun', {silent = true}),
+    vim.api.nvim_set_keymap('n', '<leader>so', '<Plug>SnipRunOperator', {silent = true}),
+    vim.api.nvim_set_keymap('n', '<leader>sc', '<Plug>SnipClose', {silent = true}),
+    vim.api.nvim_set_keymap('n', '<leader>sm', '<Plug>SnipReplMemoryClean', {silent = true})
   },
   t = {
     -- setting a mapping to false will disable it
