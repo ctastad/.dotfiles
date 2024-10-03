@@ -5,5 +5,7 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   { import = "astrocommunity.colorscheme.nord-nvim" },
-  { import = "astrocommunity.completion.codeium-vim" },
+  -- { import = "astrocommunity.code-runner.sniprun" },
+  -- { import = "astrocommunity.completion.codeium-vim" },
+  -- { import = "astrocommunity.remote-development.distant-nvim" },
 }
