@@ -93,10 +93,12 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
+# helper aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias weather='curl wttr.in/Minneapolis'
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -183,3 +185,23 @@ unset __mamba_setup
 # <<< mamba initialize <<<
 export PATH=$PATH:/var/lib/flatpak/exports/bin
 export PATH=$PATH:/usr/local/go/bin
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export SRC_ENDPOINT=https://mssm.sourcegraphcloud.com
+export SRC_ACCESS_TOKEN=$(pass mssm/sourcegraph-token)
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba init' !!
+export MAMBA_EXE='/home/cw/.local/bin/micromamba';
+export MAMBA_ROOT_PREFIX='/home/cw/micromamba';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
+export GOPATH=${HOME}/go
+export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
+
