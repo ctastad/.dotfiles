@@ -59,12 +59,53 @@ return {
     -- If you have a recent version of lazy.nvim, you don't need to add this!
     build = "nvim -l build/init.lua",
 
-    config = function()
-      require("sg").setup{}
-    end,
-    event = "VeryLazy"
+    config = function() require("sg").setup {} end,
+    event = "VeryLazy",
   },
 
+  -- Add nvim-treesitter-textobjects for better text object handling
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    event = "VeryLazy",
+  },
+
+  -- Add treesitter-docstring for Python docstring handling
+  {
+    "danymat/neogen",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("neogen").setup {
+        enabled = true,
+        languages = {
+          python = {
+            template = {
+              annotation_convention = "google",
+            },
+          },
+        },
+      }
+    end,
+    event = "VeryLazy",
+  },
+
+  -- Add automatic text wrapping for markdown and text files
+  {
+    "preservim/vim-pencil",
+    config = function()
+      vim.cmd [[
+        augroup pencil
+          autocmd!
+          autocmd FileType markdown,text,python call pencil#init({'wrap': 'soft', 'autoformat': 1})
+          " Special handling for Python docstrings
+          autocmd FileType python
+            \ let b:pencil_wrap_width = 72 |
+            \ let b:pencil_autoformat_docstring = 1
+        augroup END
+      ]]
+    end,
+    event = "VeryLazy",
+  },
   -- {
   --   "michaelb/sniprun",
   --   branch = "master",
@@ -135,7 +176,7 @@ return {
   --         SniprunFloatingWinErr  =  {fg="#881515",ctermfg="DarkRed"},
   --       },
   --
-  --       live_mode_toggle='off'      --# live mode toggle, see Usage - Running for more info   
+  --       live_mode_toggle='off'      --# live mode toggle, see Usage - Running for more info
   --     })
   --   end,
   --   event = "VeryLazy"

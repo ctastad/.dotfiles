@@ -23,7 +23,12 @@ return {
       opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
         "prettier",
         "pyproject-flake8",
-        -- "stylua",
+        "stylua",
+        "black",
+        "isort",
+        "eslint_d",
+        "styler",
+        "lintr"
       })
     end,
   },
