@@ -142,6 +142,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
+<<<<<<< HEAD
 __conda_setup="$('/home/cw/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
@@ -150,13 +151,33 @@ else
         . "/home/cw/miniforge3/etc/profile.d/conda.sh"
     else
         export PATH="/home/cw/miniforge3/bin:$PATH"
+=======
+#!/bin/bash
+
+if [[ "$(uname)" == "Darwin" ]]; then
+    export PATH="/Users/c/miniconda3/bin:/Users/c/miniconda3/condabin:$PATH"
+else
+    __conda_setup="$('/home/c/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    else
+        if [ -f "/home/c/miniconda3/etc/profile.d/conda.sh" ]; then
+            . "/home/c/miniconda3/etc/profile.d/conda.sh"
+        else
+            export PATH="/home/c/miniconda3/bin:$PATH"
+        fi
+>>>>>>> 9a36c3e (random mac config updates)
     fi
+    unset __conda_setup
 fi
+<<<<<<< HEAD
 unset __conda_setup
 
 if [ -f "/home/cw/miniforge3/etc/profile.d/mamba.sh" ]; then
     . "/home/cw/miniforge3/etc/profile.d/mamba.sh"
 fi
+=======
+>>>>>>> 9a36c3e (random mac config updates)
 # <<< conda initialize <<<
 
 export GOPATH=${HOME}/go
