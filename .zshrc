@@ -222,6 +222,31 @@ o() {
 # End:
 ### End of Zinit's installer chunk
 
+#------------------------------------------------------------------------------
+# 11. Sourcegraph and development tools
+#------------------------------------------------------------------------------
+# Sourcegraph configuration
+export SRC_ENDPOINT="https://mssm.sourcegraphcloud.com"
+export SRC_ACCESS_TOKEN=$(pass mssm/sourcegraph-token)
+
+# Singularity configuration
+export SINGULARITY_CACHEDIR="/mnt/data0/singularity"
+
+# Go configuration
+export GOPATH="${HOME}/go"
+export PATH="/usr/local/go/bin:${PATH}:${GOPATH}/bin"
+
+# Neovim path
+export PATH="/usr/local/bin/nvim-macos/bin:$PATH"
+
+# Ranger settings
+export RANGER_LOAD_DEFAULT_RC=false
+
+# Start tmux by default (but don't use exec)
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  tmux new-session -A -s main
+fi
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/c/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"

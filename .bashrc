@@ -47,12 +47,12 @@ fi
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
     else
-	color_prompt=
+    color_prompt=
     fi
 fi
 
@@ -93,12 +93,10 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# helper aliases
+# some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias weather='curl wttr.in/Minneapolis'
-
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -124,9 +122,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# enable tmux by default
+# Start tmux by default (but don't use exec)
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
- exec tmux
+  tmux new-session -A -s main
 fi
 
 # Dotfile repo alias
@@ -134,24 +132,31 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# Add to PATH
-export PATH=/home/chris/.local/bin:$PATH
-export PATH=$PATH:~/.gen3
-export SINGULARITY_CACHEDIR=/mnt/data0/singularity
+# ===== Environment Variables =====
+
+# Path configuration
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/bin/nvim-macos/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
+export GOPATH="${HOME}/go"
+export PATH="${GOPATH}/bin:$PATH"
+
+# Singularity configuration
+export SINGULARITY_CACHEDIR="/mnt/data0/singularity"
+
+# Sourcegraph configuration
+export SRC_ENDPOINT="https://mssm.sourcegraphcloud.com"
+export SRC_ACCESS_TOKEN=$(pass mssm/sourcegraph-token)
+
+# Editor settings
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
+
+# Ranger settings
+export RANGER_LOAD_DEFAULT_RC=false
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-<<<<<<< HEAD
-__conda_setup="$('/home/cw/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/cw/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/cw/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/cw/miniforge3/bin:$PATH"
-=======
 #!/bin/bash
 
 if [[ "$(uname)" == "Darwin" ]]; then
@@ -166,67 +171,7 @@ else
         else
             export PATH="/home/c/miniconda3/bin:$PATH"
         fi
->>>>>>> 9a36c3e (random mac config updates)
     fi
     unset __conda_setup
 fi
-<<<<<<< HEAD
-unset __conda_setup
-
-if [ -f "/home/cw/miniforge3/etc/profile.d/mamba.sh" ]; then
-    . "/home/cw/miniforge3/etc/profile.d/mamba.sh"
-fi
-=======
->>>>>>> 9a36c3e (random mac config updates)
 # <<< conda initialize <<<
-
-export GOPATH=${HOME}/go
-export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
-
-# ranger settings
-export RANGER_LOAD_DEFAULT_RC=false
-
-# default editor
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
-export GOPATH=${HOME}/go
-export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
-
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba init' !!
-export MAMBA_EXE='/home/c/.local/bin/micromamba';
-export MAMBA_ROOT_PREFIX='/home/c/micromamba';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
-else
-    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
-fi
-unset __mamba_setup
-# <<< mamba initialize <<<
-export PATH=$PATH:/var/lib/flatpak/exports/bin
-export PATH=$PATH:/usr/local/go/bin
-export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export SRC_ENDPOINT=https://mssm.sourcegraphcloud.com
-export SRC_ACCESS_TOKEN=$(pass mssm/sourcegraph-token)
-
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba init' !!
-export MAMBA_EXE='/home/cw/.local/bin/micromamba';
-export MAMBA_ROOT_PREFIX='/home/cw/micromamba';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
-else
-    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
-fi
-unset __mamba_setup
-# <<< mamba initialize <<<
-export GOPATH=${HOME}/go
-export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
-
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
